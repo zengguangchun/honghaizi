@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:id="@+id/rss"
+       android:layout_width="match_parent"
+       android:layout_margin="10dp"
+       android:layout_height="wrap_content">
+       <TextView
+           android:text="购物车"
+           android:textSize="16sp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"/>
+       <TextView
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textColor="#dacbcb"
+           android:text="编辑"
+           />
+   </RelativeLayout>
+    <View
+        android:id="@+id/v1"
+        android:layout_below="@+id/rss"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cfbec1" />
+
+        <CheckBox
+            android:layout_below="@+id/v1"
+            android:id="@+id/cbox_shoppig"
+            android:layout_margin="10dp"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:text="   苏宁自营"
+            android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/v2"
+        android:layout_below="@+id/cbox_shoppig"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cfbec1" />
+
+    <ListView
+        android:id="@+id/lv_shopping"
+        android:layout_below="@+id/v2"
+        android:layout_above="@+id/rs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/cbox_all"
+            android:layout_margin="10dp"
+            style="@style/CustomCheckboxTheme"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:text=" 全选"
+
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_totalprice_shopping"
+            android:padding="10dp"
+            android:paddingRight="20dp"
+            android:layout_toLeftOf="@+id/cart_but_jie"
+            android:layout_width="wrap_content"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="合计:￥0.00"/>
+<Button
+    android:id="@+id/cart_but_jie"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#9f0b27"
+    android:textColor="#ffffff"
+    android:text="去结算"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rs"
+        android:background="#cfbec1" />
+</RelativeLayout>
