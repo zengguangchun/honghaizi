@@ -11,6 +11,7 @@ import com.honghaizi.test.bean.Home_Bean;
 import com.honghaizi.test.honghaizi.R;
 import com.honghaizi.test.recyclerviewutils.Item1ViewHolder;
 import com.honghaizi.test.recyclerviewutils.Item2ViewHolder;
+import com.honghaizi.test.recyclerviewutils.Item3ViewHolder;
 import com.honghaizi.test.recyclerviewutils.TypeUtil;
 
 import java.util.ArrayList;
@@ -52,7 +53,77 @@ public class Home_RVS_Adapter extends RecyclerView.Adapter<BaseViewHolder> imple
             if (data.get(i).getSequence() == 2) {
                 superData.add(new Pair<Integer, Object>(COMMUNITY_OHTER, data.get(i).getTag()));
             }
+            if (data.get(i).getSequence() == 22) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 23) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 24) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 25) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 29) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 30) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 31) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 33) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 34) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 35) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 36) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 37) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 38) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 39) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 40) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 41) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 43) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 44) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
 
+            if (data.get(i).getSequence() == 46) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 48) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+
+            if (data.get(i).getSequence() == 50) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 52) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
+            if (data.get(i).getSequence() == 63) {
+                superData.add(new Pair<Integer, Object>(COMMUNITY_THREE, data.get(i).getTag()));
+            }
         }
     }
     // 给数据打包，两个一块
@@ -69,8 +140,10 @@ public class Home_RVS_Adapter extends RecyclerView.Adapter<BaseViewHolder> imple
         if (viewType == COMMUNITY_TOP) {
             return new Item1ViewHolder(mLayoutInflater.inflate(R.layout.home_recy_item1, parent, false),context);
 
-        } else {
+        } else if(viewType == COMMUNITY_OHTER){
             return new Item2ViewHolder(mLayoutInflater.inflate(R.layout.home_recy_item2, parent, false),context);
+        }else{
+            return new Item3ViewHolder(mLayoutInflater.inflate(R.layout.home_recy_item3, parent, false),context);
         }
     }
 
@@ -84,6 +157,9 @@ public class Home_RVS_Adapter extends RecyclerView.Adapter<BaseViewHolder> imple
                 break;
             case COMMUNITY_OHTER:
               ((Item2ViewHolder)holder).initData(superData.get(position).second);
+                break;
+            case COMMUNITY_THREE:
+                ((Item3ViewHolder)holder).initData(superData.get(position).second);
                 break;
         }
     }

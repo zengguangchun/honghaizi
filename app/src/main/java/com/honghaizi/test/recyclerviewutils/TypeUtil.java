@@ -17,6 +17,6 @@ public interface TypeUtil {
 
     public int COMMUNITY_OHTER=1;
 
-
+    public int COMMUNITY_THREE=2;
 
 }
