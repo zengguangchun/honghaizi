@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.honghaizi.test.honghaizi.ZhuceActivity">
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/iv_zuce_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_back"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:text="验证手机号" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll"
+        android:background="#c3c3c3" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/l_ll"
+        android:layout_below="@+id/v"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="手机号"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:background="@null"
+                android:numeric="integer"
+                android:id="@+id/login_et_phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:hint="请输入手机号"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                />
+            <Button
+                android:id="@+id/button_clear_shouji"
+                android:layout_alignParentRight="true"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:visibility="invisible"
+                android:background="@mipmap/search_delete_input"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="60dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="验证码"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:background="@null"
+                android:numeric="integer"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:hint="输入图形验证码"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                />
+            <!--<Button-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!---->
+             <!--/>-->
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="eterrthgfn"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下一步"/>
+    </LinearLayout>
+</RelativeLayout>
